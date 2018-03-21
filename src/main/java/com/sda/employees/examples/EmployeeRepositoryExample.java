@@ -10,7 +10,7 @@ public class EmployeeRepositoryExample {
         MysqlConnectionPoolDataSource ds = new MysqlConnectionPoolDataSource();
         ds.setUrl( "jdbc:mysql://localhost/employees" );
         ds.setUser("root");
-        ds.setPassword("sda");
+        ds.setPassword("");
         EmployeeRepository repository = new EmployeeSqlRepository(ds);
         repository.findAll().stream().limit(10).forEach(System.out::println);
     }

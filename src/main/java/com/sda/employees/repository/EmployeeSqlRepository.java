@@ -47,7 +47,7 @@ public class EmployeeSqlRepository implements EmployeeRepository{
     }
 
     public List<Employee> findByLastName(String lastName) {
-        String query = "SELECT * FROM employee WHERE last_name = ?";
+        String query = "SELECT * FROM employees WHERE last_name = ?";
         try(Connection conn = ds.getConnection(); PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, lastName);
             ResultSet rs = stmt.executeQuery();

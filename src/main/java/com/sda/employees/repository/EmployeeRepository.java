@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface EmployeeRepository {
 
+    void add(Employee emp);
     List<Employee> findAll();
     List<Employee> findByLastName(String lastName);
 }

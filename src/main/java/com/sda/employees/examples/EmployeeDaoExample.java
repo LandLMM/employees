@@ -14,7 +14,7 @@ public class EmployeeDaoExample {
 
     public static void main(String[] argv) {
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/employees", "root", "sda");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/employees", "root", "");
             EmployeeDao employees = new EmployeeSqlDao(conn);
             Employee newEmp = new Employee(510082,
                     "Konrad",
